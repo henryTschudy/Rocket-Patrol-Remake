@@ -8,7 +8,11 @@ class Rocket extends Phaser.GameObjects.Sprite {
 
     update() {
         if(this.isFiring) {
-
+            this.y -= this.movementSpeed;
+            if(this.y < borderUISize*3) {
+                this.y = game.config.height-borderUISize-borderPadding;
+                this.isFiring = false;
+            }
         } else {
             if(keyLEFT.isDown) {
                 this.x -= this.movementSpeed;
