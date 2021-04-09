@@ -22,26 +22,9 @@ class Play extends Phaser.Scene {
             'rocket'
         );
 
-        this.ship1 = new Ship(
-            this,
-            100,
-            200,
-            'spaceship'
-        );
-
-        this.ship2 = new Ship(
-            this,
-            300,
-            240,
-            'spaceship'
-        );
-
-        this.ship3 = new Ship(
-            this,
-            380,
-            300,
-            'spaceship'
-        );
+        this.ship1 = new Ship(this,100,200,'spaceship');
+        this.ship2 = new Ship(this,300,240,'spaceship');
+        this.ship3 = new Ship(this,380,300,'spaceship');
 
         // green UI background
         this.add.rectangle(
